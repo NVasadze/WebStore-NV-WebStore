@@ -22,6 +22,9 @@ public sealed class Product : IDisable
 
     public int Quantity { get; set; }
 
+    public int CategoryId { get; set; }
+
+    [ForeignKey(nameof(CategoryId))]
     public Category Category { get; set; } = null!;
 
     public ActivityInfo Activity { get; set; } = null!;
